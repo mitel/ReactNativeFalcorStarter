@@ -12,7 +12,8 @@
     "falcor": "^0.1.14",
     "falcor-http-datasource": "^0.1.2",
     "react-native": "^0.13.2",
-    "react-native-button": "^1.2.1"
+    "react-native-button": "^1.2.1",
+    "regenerator": "^0.8.41"
   },
   "devDependencies": {
     "react-native-webpack-server": "^0.8.0",

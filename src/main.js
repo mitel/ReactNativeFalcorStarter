@@ -4,6 +4,9 @@
  */
 'use strict'
 
+// https://medium.com/the-exponent-log/react-native-meets-async-functions-3e6f81111173
+require('regenerator/runtime');
+
 var React = require('react-native');
 var falcor = require('falcor');
 var HttpDataSource = require ('falcor-http-datasource');
@@ -52,16 +55,16 @@ var ReactNativeFalcorStarter = React.createClass({
           Press the button to load information from the local Falcor cache
         </Text>
       </View>
-    );
+    ); 
   },
 
-  _onPressButton: function(event) {
-    // save the context of the upper level function (render)
-    let context = this;
-    model.getValue('values[0].name').then( (value) => {
-      context.setState({...context.state, parm: value});
-    }); 
+  _onPressButton: async function(event) {
+    console.log('pressd');
+    let resp = await model.getValue('values[0].name'); 
+    console.log(resp);
+    this.setState({...this.state, parm: resp});
   },
+
 });
 
 var styles = StyleSheet.create({
