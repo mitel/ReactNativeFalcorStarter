@@ -25,7 +25,9 @@ var config = {
       test: /\.js$/,
       include: [
         path.resolve(__dirname, 'src'),
-        path.resolve(__dirname, 'node_modules/react-native-navbar'),
+        path.resolve(__dirname, 'node_modules/falcor'),
+        path.resolve(__dirname, 'node_modules/falcor-http-datasource'),
+        path.resolve(__dirname, 'node_modules/react-native'),
       ],
       loader: 'babel',
       query: {
